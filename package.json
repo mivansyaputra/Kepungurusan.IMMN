@@ -1,0 +1,27 @@
+{
+  "name": "immamanna-app",
+  "version": "1.0.0",
+  "description": "Aplikasi IMMAMANNA (Sekretaris & Bendahara)",
+  "main": "main.js",
+  "author": "IMMAMANNA",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win portable --x64 --publish never"
+  },
+  "build": {
+    "appId": "id.immamanna.app",
+    "productName": "IMMAMANNA",
+    "directories": { "output": "dist" },
+    "files": ["main.js", "index.html", "sekretaris.html", "bendahara.html", "logo.png", "icon.ico", "package.json"],
+    "win": {
+      "target": [{ "target": "portable", "arch": ["x64"] }],
+      "icon": "icon.ico"
+    },
+    "portable": { "artifactName": "IMMAMANNA-portable.exe" }
+  },
+  "devDependencies": {
+    "electron": "^31.7.7",
+    "electron-builder": "^24.13.3"
+  }
+}
